@@ -1,0 +1,132 @@
+/* App.css */
+
+/* General styles */
+body {
+  font-family: 'Arials', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+/* Add this to your App.css file */
+#img-item{
+  width: 310px;
+  height: 400px;
+}
+#product-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  /* Add a border with a color of your choice */
+  padding: 10px; 
+ 
+  margin-bottom: 4rem;/* Add padding to create space between the content and the border */
+}
+
+#item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 10px;
+  
+}
+
+#item-list p {
+  flex: 0 0 calc(25% - 20px); /* Display four items in a row */
+  margin: 10px;
+  text-align: center;
+  
+}
+#product-item{
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .26);
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 992px) {
+  #item-list p {
+    flex: 0 0 calc(33.33% - 20px); /* Display three items in a row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  #item-list p {
+    flex: 0 0 calc(50% - 20px);
+     /* Display two items in a row on smaller screens */
+  }
+  #cart-btn{
+    border-radius: 3px;
+    margin-left: 20rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #item-list p {
+    flex: 0 0 calc(50% - 20px); /* Display one item in a row on extra small screens */
+  }
+  #cart-btn{
+    border-radius: 3px;
+    margin-left: 20rem;
+  }
+}
+#nav-item {
+  display: flex;
+  position: sticky;
+  top: 0; /* Set the distance from the top where the element becomes fixed */
+  background-color: #ffffff; /* Add a background color if needed */
+  z-index: 100; /* Set a high z-index to ensure it stays on top of other elements */
+}
+.btnItem {
+  margin-bottom: 5px;
+  border-radius: 3px;
+  color: white; /* Set the desired text color */
+  background-color: rgba(52, 19, 36, 0.811); /* Set the desired background color */
+}
+
+#cart-btn{
+  border-radius: 3px;
+  margin-left: 50rem;
+  margin-bottom: 5px;
+}
+
+/* ShoppingCart styles */
+#shopping-cart {
+  width: 100%; /* Change width to 100% for responsiveness */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#shopping-cart h2 {
+  color: #333;
+}
+
+#shopping-cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+#shopping-cart li {
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#shopping-cart button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#shopping-cart button:hover {
+  background-color: #c9302c;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #product-list .product-item {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
